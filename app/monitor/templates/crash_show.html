@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>crash_show</title>
+</head>
+<body>
+<h2>
+    <strong><span style="font-size:22px;">{{ times }} Crash 数据{{ argv }}字段统计TOP 10，请参考</span></strong>
+</h2>
+<table border="1">
+    <tr>
+        <th>{{ argv }}</th>
+        <th>Num</th>
+    </tr>
+    {% for line in data %}
+        <tr>
+            {% for item in line %}
+                <th>{{ item }}</th>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
